@@ -1,14 +1,20 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 
 const AddPlayer = ({ players, setPlayers }) => {
+  const addInput = useRef(null);
   const tempArr = [...players];
   let [playerName, setPlayerName] = useState("");
-  const Adder = () => {
-    tempArr.push({
-      name: playerName,
-      score: 0,
-    });
-    setPlayers(tempArr);
+  const Adder = (e) => {
+    if (playerName == "") {
+      alert("Player must have a name");
+    } else {
+      tempArr.push({
+        name: playerName,
+        score: 0,
+      });
+      setPlayers(tempArr);
+      addInput.current.value = "";
+    }
   };
   return (
     <div className="add">
@@ -19,9 +25,10 @@ const AddPlayer = ({ players, setPlayers }) => {
         }}
         onKeyDown={(e) => {
           if (e.key === "Enter") {
-            Adder();
+            Adder(e);
           }
         }}
+        ref={addInput}
       />
       <button
         onClick={() => {
