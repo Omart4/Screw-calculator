@@ -1,11 +1,12 @@
 .player{
     width: 6rem;
     height: var(--tableHeight);
-    background-color: ;
+    background-color: var(--screw-purple);
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 .5rem 0 .5rem;
+    margin: 0 .5rem 0 0;
+    padding: 0 .5rem 0 .5rem;
 }
 h4{
     font-size: 1.5rem;

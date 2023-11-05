@@ -45,11 +45,14 @@ nav{
 }
 
 .add{
-  margin-top: 6rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+}
+.add label{
+  font-size: 1.5rem;
+  margin-bottom: .5rem;
 }
 .add input{
   outline: none;
@@ -59,6 +62,7 @@ nav{
   text-align: center;
   border-radius: 1rem;
   font-size: 1.5rem;
+  padding: .5rem 0 .5rem 0;
 }
 .add button{
   outline: none;
@@ -84,11 +88,38 @@ nav{
   justify-content: space-evenly;
   padding-top: 2rem;
   height: var(--tableHeight);
-  padding-right: 1.5rem;
+  width: 8rem;
 }
 .headers p{
   height: var(--tableCellHeight);
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+}
+.od{
+  background-color: var(--screw-purple);
+}
+.ev{
+  background-color: purple;
+}
+.bottom{
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 45rem;
+}
+#leader{
+  border: none;
+  outline: none;
+  background-color: #EEA431;
+  font-size: 1.5rem;
+  padding: .5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+#leader:hover{
+  opacity: 0.8;
 }
